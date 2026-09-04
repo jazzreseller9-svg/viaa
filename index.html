@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk My Kesayangannnn❤️ — Sorryyy</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{
+            min-height:100vh;
+            background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%);
+            font-family:Arial,sans-serif;
+            text-align:center;
+            padding:30px 20px;
+        }
+        .kotak{
+            background:white;
+            border-radius:25px;
+            padding:40px 25px;
+            max-width:400px;
+            margin:0 auto;
+            box-shadow:0 10px 30px rgba(0,0,0,0.15);
+        }
+        .emoji{font-size:50px;margin-bottom:20px}
+        h1{font-size:22px;color:#b03a2e;margin-bottom:15px}
+        p{font-size:16px;color:#444;line-height:1.8;margin-bottom:10px}
+        .hati{font-size:30px;margin:15px 0;color:red}
+        .butang{
+            padding:12px 25px;
+            border-radius:50px;
+            border:none;
+            background:#e74c3c;
+            color:white;
+            font-size:16px;
+            margin-top:20px;
+            cursor:pointer;
+        }
+        .halaman{display:none}
+        .halaman.aktif{display:block}
+    </style>
+</head>
+<body>
+    <div class="kotak">
+        <!-- HALAMAN 1 -->
+        <div class="halaman aktif" id="h1">
+            <div class="emoji">🙏</div>
+            <h1>Hai Via... ❤️</h1>
+            <p>Anuuu Apayaa ermm</p>
+            <p>Okeyyy izinkann sayaa berkataa kataa hehe...</p>
+            <div class="hati">❤️</div>
+        </div>
+
+        <!-- HALAMAN 2 -->
+        <div class="halaman" id="h2">
+            <div class="emoji">💔</div>
+            <h2>Sorryyy vivanaline 🙏</h2>
+            <p>Sorryy Sebab Buat Dia Marah ka sama ada sengaja atau tidak sengaja.</p>
+            <p>Sedar jugaa sebab banyak kann dia pi padam jadi mungkin marahh laa tuu saye rasa.</p>
+            <div class="hati">🥺❤️</div>
+        </div>
+
+        <!-- HALAMAN 3 -->
+        <div class="halaman" id="h3">
+            <div class="emoji">🤞</div>
+            <h2>Sorry Ya Viaa ❤️</h2>
+            <p>Saya janji lepasni akan lebih membuatnya balik balik marah .</p>
+            <p>Jadi kalau marah nantii tinggal minta maaf lagii kann hehe.</p>
+            <p>apayaa lagii.</p>
+            <div class="hati">💕</div>
+        </div>
+
+        <!-- HALAMAN 4 -->
+        <div class="halaman" id="h4">
+            <div class="emoji">🥰</div>
+            <h2>Tq ❤️</h2>
+            <p>Tq sebab baca sampaii habis walaupun ntah apa jaa di cakap ni.</p>
+            <p>Sayanggggg c viaaa. Jann marahh ii yaaa.</p>
+            <div class="hati">❤️❤️❤️</div>
+            <p style="font-style:italic;color:#777;margin-top:20px;">— Yang ikhlas, dari hati saya untuk Via ❤️</p>
+        </div>
+
+        <!-- BUTANG -->
+        <div style="margin-top:25px;">
+            <button class="butang" onclick="tukar(-1)">← Sebelum</button>
+            <button class="butang" onclick="tukar(1)">Seterusnya →</button>
+        </div>
+    </div>
+
+<script>
+    let sekarang = 1;
+    const jumlah = 4;
+
+    function kemasKini(){
+        for(let i=1;i<=jumlah;i++){
+            document.getElementById('h'+i).classList.remove('aktif');
+        }
+        document.getElementById('h'+sekarang).classList.add('aktif');
+    }
+
+    function tukar(arah){
+        sekarang = sekarang + arah;
+        if(sekarang < 1) sekarang = jumlah;
+        if(sekarang > jumlah) sekarang = 1;
+        kemasKini();
+    }
+</script>
+</body>
+</html>
